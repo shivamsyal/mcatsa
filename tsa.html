@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<title>TSA</title>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  }
+  .vid {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+}
+.container {
+  bottom: 0;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+/*
+.container:after {
+  content: "";
+  position: absolute;
+  height: 80px;
+  left: -10%;
+  right: -10%;
+  border-radius: 50%;
+  bottom: -25px;
+  background: #fff;
+  margin-top: 0px;
+
+}*/
+h1 {
+  text-align: center;
+  line-height: 400px;
+  font-family: 'Big Shoulders Text',cursive;
+  font-size: 50px;
+  color: #fffc9e;
+}
+.container2 {
+  position: fixed;
+  margin: 0 auto;
+  width: 1000px;
+  height: 100%;
+  padding: 0%;
+  text-align: center;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: 'Big Shoulders Text',cursive;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+/* Links inside the navbar */
+.navbar a {
+  float: center;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  display:inline-block;
+}
+
+/* The dropdown container */
+.dropdown {
+  overflow: hidden;
+  float: center;
+  display: inline;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 50px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: red;
+
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  float: center;
+  display: inline;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: center;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  float: center;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  float: center;
+  margin-left: 54.5%;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.cont1{
+
+  padding-top: 1.5%;
+}
+
+.head{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /*line-height: 400px;*/
+  font-family: 'Turret Road', cursive;
+  font-size: 25px;
+  color: #000000;
+  background: #fff7e1ff;
+
+
+}
+.foo{
+
+  text-align: center;
+}
+.cont1{
+  text-align: center;
+}
+
+</style>
+<body>
+
+	<div class="container">
+    <video style="position: fixed; top: 0; width: 100%; z-index: -1; left: 0;" loop autoplay muted >
+            <source src="TSA vid.mp4" type="video/mp4">
+    </video>
+			<h1>MCA Technology Student Association</h1>
+
+	</div>
+
+	<div class="navbar" id="nav">
+  <div class = "cont">
+<a href="tsa.html" id="home">Home</a>
+  <a href="members.html" id="mem">Members</a>
+  <a href="registration.html" id="reg">Registration</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href = 'competitions.html';">Competitions
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="do">
+      <a href="competitions.html#con"id="teams">TEAMS</a>
+      <a href="competitions.html#con1"id="ce">Competitive Events</a>
+      <a href="competitions.html#con2"id="tsavex">TSA Vex Robotics</a>
+    </div>
+  </div>
+  <a href="nationals.html" id="nationals">Nationals</a>
+</div>
+</div>
+<div class="head">
+  <h2>What is TSA?</h2>
+</div>
+<div class="cont1" style="background: white;">
+
+
+  <img src="TSA home dr 1.png"></img>
+
+</div>
+<div class="foo" style="background: white;">
+<img src="TSA home dr.png"></img>
+</div>
+	</body>
+</html>
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("nav");
+var myElement = document.getElementById("do");
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+	myElement.style.position='fixed';
+
+  } else {
+    navbar.classList.remove("sticky");
+	myElement.style.position='absolute';
+  }
+}
+</script>
